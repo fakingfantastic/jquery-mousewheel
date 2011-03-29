@@ -72,6 +72,8 @@ function handler(event) {
     // Add event and delta to the front of the arguments
     args.unshift(event, delta, deltaX, deltaY);
     
+    event.preventDefault(); 
+
     return $.event.handle.apply(this, args);
 }
 
